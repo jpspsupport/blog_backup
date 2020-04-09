@@ -42,8 +42,8 @@ jobs:
       - run:
           name: npm run deploy
           command: |
-            git config --global user.email "jpazidbot@microsoft.com"
-            git config --global user.name "jpazidbot"
+            git config --global user.email "jebaosa@microsoft.com"
+            git config --global user.name "jpspsupport"
             npm run deploy
 
 
