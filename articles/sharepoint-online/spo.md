@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online について
-date: 2020-04-01
+date: 2020-04-13
 tags:
   - SharePoint Online
 ---
@@ -9,6 +9,4 @@ tags:
 
 # SharePoint Online について
 
-こんにちは。テスト投稿です。  
-
-テスト
+こんにちは。テスト投稿です。
