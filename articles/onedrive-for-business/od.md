@@ -1,6 +1,6 @@
 ---
 title: OneDrive for Business について
-date: 2020-03-31
+date: 2020-04-12
 tags:
   - OneDrive for Business
 ---
