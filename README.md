@@ -1,8 +1,9 @@
-# 日本マイクロソフト SharePoint サポート チームのブログです。
+# 日本マイクロソフト SharePoint サポート チーム ブログ
 
-チームの担当製品である SharePoint Online / OneDrive for Business / Micorosft Stream の情報を中心にお届けします。
-[ブログ](https://jpspsupport.github.io/blog)  
-[以前の SharePoint サポート フォーラム](https://social.msdn.microsoft.com/Forums/ja-JP/home?forum=sharepointsupportteamja)  
+このブログでは SharePoint Online / OneDrive for Business の情報を中心にお届けします。
+
+- [ブログ](https://jpspsupport.github.io/blog)  
+- [以前の SharePoint サポート フォーラム](https://social.msdn.microsoft.com/Forums/ja-JP/home?forum=sharepointsupportteamja)  
 
 ## General
 - [ようこそ](./articles/general/welcome.md)
@@ -13,5 +14,7 @@
 ## OneDrive for Business
 
 ## Microsoft Stream
+
+## 情報採取
 
 ## そのほか
