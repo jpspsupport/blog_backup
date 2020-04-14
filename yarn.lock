@@ -2211,10 +2211,10 @@ hexo-generator-index@^0.2.1:
     hexo-pagination "0.0.2"
     object-assign "^4.0.1"
 
-"hexo-generator-root-tag@github:jpazureid/hexo-generator-root-tag":
+"hexo-generator-root-tag@github:jpspsupport/hexo-generator-root-tag":
   version "0.1.0"
-  uid "7f200221c62be176f1db70382bb0239b37681571"
-  resolved "https://codeload.github.com/jpazureid/hexo-generator-root-tag/tar.gz/7f200221c62be176f1db70382bb0239b37681571"
+  uid "25b69e964c8e1517bd225b4dfbfbfc7cfa3182b4"
+  resolved "https://codeload.github.com/jpspsupport/hexo-generator-root-tag/tar.gz/25b69e964c8e1517bd225b4dfbfbfc7cfa3182b4"
   dependencies:
     hexo-pagination "0.1.0"
 
@@ -2235,10 +2235,10 @@ hexo-generator-tag@^0.2.0:
     hexo-pagination "0.0.2"
     object-assign "^4.0.1"
 
-"hexo-hepler-github-issues@github:jpazureid/hexo-helper-github-issues":
+"hexo-hepler-github-issues@github:jpspsupport/hexo-helper-github-issues":
   version "1.0.0"
-  uid "0502f60173dc6ea369c873ece342240d499bd773"
-  resolved "https://codeload.github.com/jpazureid/hexo-helper-github-issues/tar.gz/0502f60173dc6ea369c873ece342240d499bd773"
+  uid c973552468b32e2733b270f811fd2b70a2824940
+  resolved "https://codeload.github.com/jpspsupport/hexo-helper-github-issues/tar.gz/c973552468b32e2733b270f811fd2b70a2824940"
   dependencies:
     uuid "^3.3.2"
 
@@ -3058,15 +3058,10 @@ lodash.uniqwith@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniqwith/-/lodash.uniqwith-4.5.0.tgz#7a0cbf65f43b5928625a9d4d0dc54b18cadc7ef3"
   integrity sha1-egy/ZfQ7WShiWp1NDcVLGMrcfvM=
 
-lodash@^4.0.0, lodash@^4.17.13:
+lodash@^4.0.0, lodash@^4.17.13, lodash@^4.17.5, lodash@^4.2.1:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-lodash@^4.17.5, lodash@^4.2.1:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
 log-symbols@^1.0.2:
   version "1.0.2"
