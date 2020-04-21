@@ -81,11 +81,11 @@ SharePoint Online はマルチテナント型の SaaS サービスです。つ�
 | クラッシック エクスペリエンス | モダン エクスペリエンス
 |:-----------|:------------|
 | チームサイト、発行ポータル、など | モダンチームサイト、コミュニケーションサイト、ハブサイトなど |
-| サンドボックス ソリューション<br/>スクリプト エディター/コンテンツ エディタ Web パーツ | SharePoint Framework |
+| サンドボックス ソリューション<br/>スクリプト エディター/コンテンツ エディター Web パーツ | SharePoint Framework |
 | アンケートリスト | Microsoft Forms |
 | タスクリスト | Microsoft Planner |
 | 予定表リスト | Outlook Calendar (Office 365 Groups) |
-| ニュース(サイト)フィード、ディスカッション掲示板 | Yammer |
+| ニュース（サイト）フィード、ディスカッション掲示板 | Yammer |
 | SharePoint ワークフロー | Microsoft Flow (Power Automate) |
 | InfoPath | Microsoft PowerApps |
 
