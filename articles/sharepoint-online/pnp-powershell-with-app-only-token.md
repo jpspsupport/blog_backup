@@ -59,7 +59,7 @@ Office 365 管理センターで指定した全体管理者または SharePoint 
 #### イメージ
 ![AppInv2](pnp-powershell-with-app-only-token/appinv2.png)
 
-3) PnP PowerShell で以下のように接続します。後は、続けてコマンドレットを実行ください。
+### 3) PnP PowerShell で以下のように接続します。後は、続けてコマンドレットを実行ください。
 
 `Connect-PnPOnline https://{tenant}.sharepoint.com -AppId <クライアント ID> -AppSecret <クライアント シークレット>`
 
