@@ -35,7 +35,7 @@ Fiddler の AutoResponder を使用して、CSOM などの通信に対して、�
 5) Rule Editor の下のセレクトボックスで [Create New Response...] をプルダウンから選択します。
 6) [Save] をクリックすると、ダイアログがポップアップされます。
 
-![Fiddler3](Testing-backoff-logic/Fiddler3.png)
+![Fiddler3](Testing-backoff-logic/Fiddler3-1.png)
 
 7) [Raw] タブをクリックします。
 8) HTTP 応答のステータス コードに 429 TOO MANY REQUESTS を指定します。
