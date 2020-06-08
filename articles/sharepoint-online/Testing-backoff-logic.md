@@ -45,7 +45,7 @@ Fiddler の AutoResponder を使用して、CSOM などの通信に対して、�
 10) [Save] をクリックします。
 11) ダイアログを [x] を押して閉じます。
 
-この後、Fiddler を起動してロジックをテストしてください。指定された感覚でリトライが実行されることが確認できます。
+この後、Fiddler を起動してロジックをテストしてください。指定された間隔でリトライが実行されることが確認できます。
 
 ![Fiddler4](Testing-backoff-logic/Fiddler4.png)
 
