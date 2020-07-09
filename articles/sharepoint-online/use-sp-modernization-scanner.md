@@ -14,7 +14,7 @@ tags:
 最初に、移行する SharePoint 2010 形式ワークフローの全体像をつかむことは必須の作業となります。これをもとに、技術的な課題項目を整理したり、工数を見積もるという作業が派生してくると思います。
 本投稿では、できる限りスムーズに移行検討作業に移れるよう、現バージョンの SharePoint モダン化スキャナーによる操作イメージを画面付きで紹介します。
 
-## 1．最初に下記サイトからツールをダウンロードします。
+## 1． 最初に下記サイトからツールをダウンロードします。
 
 タイトル : SharePoint モダン化スキャナーを使い始める
 アドレス : https://docs.microsoft.com/ja-jp/sharepoint/dev/transform/modernize-scanner
@@ -34,7 +34,7 @@ Selected Authentication Option ですが、テナント全体に対して実行�
 タイトル : PnP PowerShell でテナントのフルコントロール権限を使用して接続する方法について
 アドレス : https://jpspsupport.github.io/blog/sharepoint-online/pnp-powershell-with-app-only-token/
 
-なお、上記サイトはテナントに対してフルコントロール権限でアプリを払い出しておりますので、適宜権限要求XML を変更してサイトに対するフルコントロール等に変更していただいてもかまいません。
+なお、上記サイトはテナントに対してフルコントロール権限でアプリを払い出しておりますので、適宜権限要求 XML を変更してサイトに対するフルコントロール等に変更していただいてもかまいません。
 
 ### 2-2. クライアント ID とクライアント シークレットを入力して [Next] をクリックします
 ### 2-3. 対象を指定して [Next] をクリックします。
@@ -71,8 +71,8 @@ Selected Authentication Option ですが、テナント全体に対して実行�
 
 ![EXCEL1](use-sp-modernizationscanner/SMS09.png)
 
-例.
-* SharePoint 2010 形式ワークフロー(Version = 2010)
+例
+* SharePoint 2010 形式ワークフロー (Version = 2010)
 * リストで新規インスタンスを許可されている (Enabled = True) 
 
 ![EXCEL2](use-sp-modernizationscanner/SMS10.png)
