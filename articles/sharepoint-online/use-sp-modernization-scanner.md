@@ -65,7 +65,10 @@ Selected Authentication Option ですが、テナント全体に対して実行�
 
 日本語が含まれる場合は、一度ファイルをメモ帳で開いて、名前を付けて保存し、UTF8 BOM 付きで保存しなおし、その後 Excel で開きます。
 
-![FILES2](use-sp-modernizationscanner/SMS08.png)
+![FILES2](use-sp-modernizationscanner/SMS08-1.png)
+
+Windows 10 以前の OS をご利用の場合は UTF-8 (BOM 付き) の文字コードが指定できない場合があります。この場合は、UTF-8 として上書き保存すれば明示的に BOM が指定されます。
+手順 9 移行で Excel が文字化けしている場合は、この手順がスキップされていることに起因します。
 
 ## 9. シート上のセルをテーブルに変換し、フィルターを使用して、置き換え対象のワークフローを絞り込んでいきます。
 
