@@ -1,11 +1,11 @@
 ---
-title: Power Automate で　SharePoint リスト　アイテムに対して個別のアクセス権を付与する方法
+title: Power Automate で SharePoint リスト アイテムに対して個別のアクセス権を付与する方法
 date: 2020-07-14
 tags:
   - SharePoint Online
 ---
 
-# Power Automate で　SharePoint リスト　アイテムに対して個別のアクセス権を付与する方法
+# Power Automate で SharePoint リスト アイテムに対して個別のアクセス権を付与する方法
 
 今回の投稿では、SharePoint Online における [SharePoint 2010 形式ワークフローの廃止](https://support.microsoft.com/ja-jp/office/1ca3fff8-9985-410a-85aa-8120f626965f?ui=ja-jp&rs=ja-jp&ad=jp) (MC217999) に際して、移行先となる Power Automate を簡単に紹介します。
 
