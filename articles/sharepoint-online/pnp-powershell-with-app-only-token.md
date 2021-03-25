@@ -43,11 +43,11 @@ Office 365 管理センターで指定した全体管理者または SharePoint 
  2-1) アプリ ID に、先ほど登録したクライアント ID を入力して、アプリの情報を呼び出します。
  2-2) アプリのアクセス許可を付与するために XML を記載します。
 
- `
+ ``` XML
 <AppPermissionRequests AllowAppOnlyPolicy="true">
   <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 </AppPermissionRequests>
-`
+```
 
  2-3) [作成] をクリックします。 
 
@@ -62,11 +62,15 @@ Office 365 管理センターで指定した全体管理者または SharePoint 
  2-5) テナントでレガシーのアプリ専用トークンを有効化します。
    2020 年夏頃以降に新規作成したテナントにおいて、アプリ専用トークンが既定で無効化されている場合があります。その場合は [SharePoint Online 管理シェル](https://support.microsoft.com/ja-jp/office/c16941c3-19b4-4710-8056-34c034493429) を使用してテナントの設定を変更ください。
 
-`Set-SPOTenant -DisableCustomAppAuthentication $FALSE
+``` PowerShell
+Set-SPOTenant -DisableCustomAppAuthentication $FALSE
+```
 
 ### 3) PnP PowerShell で以下のように接続します。後は、続けてコマンドレットを実行ください。
 
-`Connect-PnPOnline https://{tenant}.sharepoint.com -AppId <クライアント ID> -AppSecret <クライアント シークレット>`
+``` PowerShell
+Connect-PnPOnline https://{tenant}.sharepoint.com -AppId <クライアント ID> -AppSecret <クライアント シークレット>
+```
 
 # 注意
 アプリ専用トークンは、非常に強力です。しかし、クライアント ID やシークレットとなる情報に尽きましては、管理者アカウント・パスワードと同様、厳重に管理してくださいますようお願いします。
