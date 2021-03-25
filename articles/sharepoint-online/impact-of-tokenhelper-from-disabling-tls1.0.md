@@ -27,7 +27,7 @@ HttpWebRequest.GetResponse メソッドや、Client Side Object Model (CSOM) な
 上記エラーが発生したとしても、対処方法としては TLS 1.2 を有効化する対応を実施ください。
 
 ### 対処策
-公開情報ご確認の上、上記のようなエラーが発生した場合は TLS 1.0 および 1.1 無効化によるを疑い、対処を実施ください。
+公開情報ご確認の上、上記のようなエラーが発生した場合は TLS 1.0 および 1.1 無効化による影響を疑い、対処を実施ください。
 
 タイトル : TLS 1.2 を有効にする方法
 アドレス : https://docs.microsoft.com/ja-jp/mem/configmgr/core/plan-design/security/enable-tls-1-2
