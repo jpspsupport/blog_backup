@@ -24,7 +24,7 @@ HttpWebRequest.GetResponse メソッドや、Client Side Object Model (CSOM) な
 
 `Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.at System.Net.HttpWebRequest.GetResponse() at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse() at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl OAuth2AccessTokenRequest oauth2Request) --- End of inner exception stack trace --- at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl OAuth2AccessTokenRequest oauth2Request) at SampleNameSpace.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName String targetHost String targetRealm)`
 
-上記エラーが発生したとしても、落ち着いて TLS 1.2 を有効化する対応を実施ください。
+上記エラーが発生したとしても、対処方法としては TLS 1.2 を有効化する対応を実施ください。
 
 ### 対処策
 公開情報ご確認の上、上記のようなエラーが発生した場合は TLS 1.0 および 1.1 無効化によるを疑い、対処を実施ください。
