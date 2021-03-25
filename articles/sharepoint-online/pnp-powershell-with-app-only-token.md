@@ -62,7 +62,7 @@ Office 365 管理センターで指定した全体管理者または SharePoint 
  2-5) テナントでレガシーのアプリ専用トークンを有効化します。
    2020 年夏頃以降に新規作成したテナントにおいて、アプリ専用トークンが既定で無効化されている場合があります。その場合は [SharePoint Online 管理シェル](https://support.microsoft.com/ja-jp/office/c16941c3-19b4-4710-8056-34c034493429) を使用してテナントの設定を変更ください。
 
-  `Set-SPOTenant -DisableCustomAppAuthentication $FALSE
+`Set-SPOTenant -DisableCustomAppAuthentication $FALSE
 
 ### 3) PnP PowerShell で以下のように接続します。後は、続けてコマンドレットを実行ください。
 

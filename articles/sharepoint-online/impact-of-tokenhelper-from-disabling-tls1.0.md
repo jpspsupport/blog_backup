@@ -115,7 +115,7 @@ public static string GetRealmFromTargetUrl(Uri targetApplicationUri)
 しかし、トランスポート層で通信が拒否されます。アプリケーション層での通信は実行されないため、SharePoint Online サーバーから HTTP 応答ヘッダー WWW-Authenticate などの値は返されません。このことにより Realm が null として返されます。
 
 その結果、次の GetAppOnlyAccessToken メソッドに targetRealm が null が渡されます。
-ACS に渡されるクライアント ID は、クライアント ID@realm の形式で渡されます。この値が不正な形式 (クライアントID@) となるため、上記のエラーが発生します。
+ACS に渡されるクライアント ID は、ClientID@Realm の形式で渡されます。この値が不正な形式 (ClientID@) となるため、HTTP 応答コード 401 と共に RequestFailedException が返されます。
 
 
 ## 参考情報
