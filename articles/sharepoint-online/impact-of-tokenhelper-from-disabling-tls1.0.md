@@ -1,5 +1,5 @@
 ---
-title: TLS 1.0 や 1.1 廃止による TokenHelper でアプリ専用トークン取得動作への影響について
+title: TLS 1.0 や 1.1 廃止による TokenHelper アプリ専用トークン取得動作への影響について
 date: 2021-03-25
 tags:
   - SharePoint Online
@@ -8,8 +8,8 @@ tags:
 Microsoft 365 においては、メッセージ センターや各公開情報に記載の通り、TLS 1.0 と 1.1 を廃止し、新しい暗号化技術を基準とすることで、お客様データのセキュリティ保護を向上する動きを拡大しております。
 全世界のお客様を想定すると一部に限定されることを想定してはおりますが、特に旧バージョンのオペレーティング システムや .NET Framework (4.5 以下) 基盤をご利用の場合は、ご自身のシステムが影響を受けないか今一度ご確認ください。
 
-一般的なプロトコルとして TLS ではトランスポート層において、クライアントとサーバーで対応バージョン等の情報を交換し、ハンドシェイクを実施します。この通信が確立できた場合はアプリケーション層の通信を開始する流れです。
-TLS 1.0 や 1.1 が廃止が適応されると、クライアントから TLS 1.0 を要求した際に、サーバーがこれを拒否し、トランスポート層で通信が遮断されます。
+一般的な HTTPS 通信においては、トランスポート層において TLS プロトコルはクライアントとサーバーで対応バージョン等の情報を交換し、ハンドシェイクを実施します。該当処理の確立後は、当該暗号化技術の上で上位層 (アプリケーション層を含む) の通信を開始していく流れです。
+TLS 1.0 や 1.1 が廃止が適応されると、クライアントから TLS 1.0 を要求した際に、Microsoft 365 の各種サーバーがこれを拒否し、トランスポート層で通信が遮断される動作となります。
 
 このような遮断を受けた時、.NET アプリケーション側で確認する典型的なエラーは以下となります。
 
@@ -59,8 +59,8 @@ TokenHelper では、Realm を取得し、ClientID, ClientSecret および Realm
     }
 ```
 
-エラーが発生する流れとして、まずは TLS によりトランスポート層で拒否されることにより、TokenHelper.GetReamFromTargetUrl メソッド内で WebException (内部例外は IOException と SocketException) が返されます。
-しかし、該当メソッドでは WebException をメソッド外にスローすることはありません。該当リクエストは HTTP 応答 401 が返ることを想定したコードであるため、内部で例外を補足し、HTTP 応答ヘッダー WWW-Authenticate の値から Realm の情報を読み取ろうとします。
+エラーが発生する流れとして、まずは TLS によりトランスポート層で拒否されることにより、TokenHelper.GetReamFromTargetUrl メソッド内で上記典型的な例外 : WebException (内部例外は IOException と SocketException) が返されます。
+しかし、GetRealmFromTargetUrl メソッドは WebException をメソッド外部にスローしない実装です。該当リクエストは HTTP 応答 401 が返ることを想定したコードであるため、内部で例外を補足し、HTTP 応答ヘッダー WWW-Authenticate の値から Realm の情報を読み取ろうとします。
 
 ```csharp
 public static string GetRealmFromTargetUrl(Uri targetApplicationUri)
@@ -112,10 +112,17 @@ public static string GetRealmFromTargetUrl(Uri targetApplicationUri)
 }
 ```
 
-しかし、トランスポート層で通信が拒否されます。アプリケーション層での通信は実行されないため、SharePoint Online サーバーから HTTP 応答ヘッダー WWW-Authenticate などの値は返されません。このことにより Realm が null として返されます。
+しかし、トランスポート層で通信が拒否されます。アプリケーション層での通信は実行されないため、SharePoint Online サーバーから HTTP 応答ヘッダー WWW-Authenticate などの値は返されません。このことにより例外オブジェクトの HTTP ヘッダーから Realm が取得できず、Realm が null として返されます。
 
 その結果、次の GetAppOnlyAccessToken メソッドに targetRealm が null が渡されます。
 ACS に渡されるクライアント ID は、ClientID@Realm の形式で渡されます。この値が不正な形式 (ClientID@) となるため、HTTP 応答コード 401 と共に RequestFailedException が返されます。
+
+もちろん、RequestFailedException 単体を見た場合、アプリケーションへの変更により、Client ID がつかなくなった場合や、Client Secret の有効期限が切れた等の別事象も切り分ける必要はあります。
+その際には、最新の Windows 端末等より、Connect-PnPOnline コマンドを実行して、アプリ定義自体に問題がないことを切り分けるのも有効な手段です。
+
+``` PowerShell
+Connect-PnPOnline https://{tenant}.sharepoint.com -ClientId <クライアント ID> -ClientSecret <クライアント シークレット>
+```
 
 
 ## 参考情報

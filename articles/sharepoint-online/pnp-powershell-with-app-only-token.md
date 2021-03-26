@@ -69,7 +69,7 @@ Set-SPOTenant -DisableCustomAppAuthentication $FALSE
 ### 3) PnP PowerShell で以下のように接続します。後は、続けてコマンドレットを実行ください。
 
 ``` PowerShell
-Connect-PnPOnline https://{tenant}.sharepoint.com -AppId <クライアント ID> -AppSecret <クライアント シークレット>
+Connect-PnPOnline https://{tenant}.sharepoint.com -ClientId <クライアント ID> -ClientSecret <クライアント シークレット>
 ```
 
 # 注意
