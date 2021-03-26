@@ -117,7 +117,7 @@ public static string GetRealmFromTargetUrl(Uri targetApplicationUri)
 その結果、次の GetAppOnlyAccessToken メソッドに targetRealm が null が渡されます。
 ACS に渡されるクライアント ID は、ClientID@Realm の形式で渡されます。この値が不正な形式 (ClientID@) となるため、HTTP 応答コード 401 と共に RequestFailedException が返されます。
 
-もちろん、RequestFailedException 単体を見た場合、アプリケーションへの変更により、Client ID がつかなくなった場合や、Client Secret の有効期限が切れた等の別事象も切り分ける必要はあります。
+もちろん、RequestFailedException 単体を見た場合、アプリケーションへの変更により、Client ID が使用できなくなった場合や、Client Secret の有効期限が切れた等の別事象も切り分ける必要はあります。
 その際には、最新の Windows 端末等より、Connect-PnPOnline コマンドを実行して、アプリ定義自体に問題がないことを切り分けるのも有効な手段です。
 
 ``` PowerShell
