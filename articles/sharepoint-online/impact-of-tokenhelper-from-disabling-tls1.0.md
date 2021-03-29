@@ -33,7 +33,8 @@ HttpWebRequest.GetResponse メソッドや、Client Side Object Model (CSOM) な
 アドレス : https://docs.microsoft.com/ja-jp/mem/configmgr/core/plan-design/security/enable-tls-1-2
 
 なお、Azure App Service 上のアプリで .NET Framework 4.5 以下をご使用の場合は、対象のフレームワークバージョンを 4.6 以上に上げることが推奨です。
-それが難しい場合は、以下のコードを一行アプリケーションの初期化段階に加えることをお勧めします。
+ただし、参照アセンブリ等、依存関係の理由により難しい場合は、以下のコードを一行だけアプリケーションのなるべく早い段階の処理として加えることをお勧めします。
+下記更新対象の値は static プロパティとしてアプリケーション全体をスコープとして影響し、アウトバウンドの TLS バージョンを 1.2 に指定します。 
 
 ```csharp
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
